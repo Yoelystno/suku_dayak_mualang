@@ -1,0 +1,164 @@
+body {
+  margin: 100px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #a8008400;
+  color: #fff;
+}
+
+.hero {
+  background: url('background-welcome.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.biodata-section {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Kartu ID 3D */
+.card-3d {
+  width: 270px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card-3d:hover {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  background: #ffffff;
+}
+
+.card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5e239d;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  text-align: center;
+  padding: 20px;
+}
+
+.card-header {
+  background: #5e239d;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.4em;
+}
+
+.card-header p {
+  margin: 5px 0 0;
+  font-size: 0.95em;
+}
+
+.card-photo {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  border-bottom: 2px solid #5e239d;
+  display: block;
+  margin-left: 6.7px;
+  margin-right: auto;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 10px #a229ff88;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 5px;
+  text-align: center;
+}
+
+.card-body p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 0.95em;
+}
+
+.card-photo::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
+  transform: rotate(25deg);
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.qr-code {
+  margin-top: 15px;
+  width: 120px;
+  height: auto;
+  border: 2px solid #a259ff;
+  border-radius: 8px;
+}
+
+.social-media-icons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row; /* ubah dari column ke row */
+  align-items: center;
+  gap: 15px;
+  z-index: 100;
+}
+
+.social-media-icons-bottom {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 10px 10px 0;
+  background-color: #000000;
+}
+
+.social-media-icons-bottom img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-media-icons-bottom a:hover img {
+  transform: scale(1.2);
+}
+
+
+@keyframes shimmer {
+  0% {
+    transform: translate(-100%, -100%) rotate(25deg);
+  }
+  100% {
+    transform: translate(100%, 100%) rotate(25deg);
+  }
+}

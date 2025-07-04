@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)file:///C:/Users/ACER/OneDrive/Documents/Website/index.html/index.html -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WELCOME TO WEBSITE YUSTINO YOEL</title>
+  <link rel="stylesheet" href="./WELCOME TO WEBSITE YUSTINO YOEL_files/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #5e239d;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #ffffff;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Hero Section Stylish Background + Animation */
+.hero {
+  background: linear-gradient(rgba(94, 35, 157, 0.705), rgba(61, 0, 66, 0.479)),
+              url('background-welcome.jpg') center/cover no-repeat fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeInHero 1.2s ease-out;
+  color: #ffffff;
+}
+
+/* Text animation (floating effect) */
+/* Hero Title - Tampil Besar dan Elegan */
+.hero h2 {
+  font-size: 3.5em;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(162, 89, 255, 0.5);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+/* Deskripsi Hero */
+.hero p {
+  font-size: 1.3em;
+  color: #dddddd;
+  margin-bottom: 30px;
+}
+
+/* Tombol CTA - Tampilan Keren */
+.cta-button {
+  padding: 15px 35px;
+  background: linear-gradient(to right, #a259ff, #5e239d);
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(162, 89, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(162, 89, 255, 0.5);
+  background: linear-gradient(to right, #b47aff, #6b30c0);
+}
+
+/* Keyframes for smooth load-in */
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for floating motion */
+@keyframes floatHero {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+    /* Tampilan modern dan animasi halus */
+.about {
+  background-color: rgba(162, 89, 255, 0.2); /* Ungu transparan tanpa gelap */
+  border: 2px solid #a259ff;
+  border-radius: 12px;
+  padding: 60px 30px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.1);
+  backdrop-filter: blur(6px); /* efek kaca buram */
+}
+
+/* Efek muncul saat scroll */
+.about.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about h3 {
+  color: #a259ff;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: glowTitle 2s ease-in-out infinite alternate;
+}
+
+.about p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #440041;
+  text-align: justify;
+  animation: fadeInText 2s ease forwards;
+}
+
+/* Animasi tambahan */
+@keyframes glowTitle {
+  from {
+    text-shadow: 0 0 10px rgba(162, 89, 255, 0.3);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(162, 89, 255, 0.8);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    .biodata-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      background-color: #450086;
+      flex-wrap: wrap;
+    }
+
+    .biodata-section img {
+      max-width: 250px;
+      border-radius: 10px;
+      margin-right: 30px;
+      border: 3px solid #a259ff;
+    }
+
+    .biodata-text {
+      max-width: 400px;
+    }
+
+    .biodata-text h3 {
+      color: #a259ff;
+      margin-bottom: 10px;
+    }
+
+    .biodata-text p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.card-back p {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.qrcode {
+  width: 80%;
+  max-width: 180px;
+  height: auto;
+  border: 2px solid #a259ff;
+  border-radius: 8px;
+}
+
+
+    .article {
+  background: rgba(162, 89, 255, 0.1); /* ungu transparan */
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 60px 30px;
+  max-width: 900px;
+  margin: 60px auto;
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.15);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Efek muncul saat scroll */
+.article.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.article h3 {
+  color: #4800a7;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: glowTitle 2s ease-in-out infinite alternate;
+}
+
+.article p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #4800a7;
+  text-align: justify;
+  margin-bottom: 20px;
+  animation: fadeInText 1s ease;
+}
+
+.article img {
+  width: 100%;
+  max-width: 600px;
+  margin: 25px auto;
+  display: block;
+  border-radius: 10px;
+  border: 2px solid #a259ff;
+  box-shadow: 0 5px 15px rgba(162, 89, 255, 0.2);
+  transition: transform 0.3s;
+}
+
+.article img:hover {
+  transform: scale(1.02);
+}
+
+.article ul {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.article ul li {
+  margin-bottom: 10px;
+  color: #4800a7;
+}
+
+/* Tambahan animasi */
+@keyframes glowTitle {
+  from {
+    text-shadow: 0 0 10px rgba(162, 89, 255, 0.3);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(162, 89, 255, 0.8);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    .social-media-icons-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px 0;
+  padding: 20px;
+  background: linear-gradient(to right, rgba(162, 89, 255, 0.2), rgba(94, 35, 157, 0.2));
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.social-media-icons-bottom.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.social-media-icons-bottom a img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.social-media-icons-bottom a img:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 0 15px rgba(162, 89, 255, 0.6);
+  border-color: #a259ff;
+}
+
+    footer {
+      background-color: #5e239d;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    .scroll-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>WELCOME TO WEBSITE YUSTINO YOEL</h1>
+    <nav>
+      <a href="file:///C:/Users/ACER/OneDrive/Documents/Website/index.html/index.html#">Beranda</a>
+      <a href="file:///C:/Users/ACER/OneDrive/Documents/Website/index.html/index.html#tentang">Tentang</a>
+      <a href="file:///C:/Users/ACER/OneDrive/Documents/Website/index.html/index.html#biodata">Biodata</a>
+      <a href="file:///C:/Users/ACER/OneDrive/Documents/Website/index.html/index.html#artikel">Artikel</a>
+      <a href="file:///C:/Users/ACER/OneDrive/Documents/Website/index.html/index.html#medsos">Medsos</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>WELCOME TO WEBSITE YUSTINO YOEL</h2>
+    <p>Website modern dengan nuansa ungu yang elegan dan profesional.</p>
+    <button class="cta-button" onclick="window.open(&#39;tentang.html&#39;, &#39;_self&#39;)">Tentang Yustino Yoel</button>
+  </section>
+  
+  <section class="about scroll-fade show" id="tentang">
+    <h3>Tentang Website</h3>
+    <p>
+      Website ini dibuat sebagai representasi semangat dan karya Yustino Yoel anak muda Dayak Mualang yang percaya bahwa budaya dan teknologi dapat berjalan beriringan. Di dalamnya, Anda akan menemukan kisah, identitas, pengetahuan, dan nilai-nilai lokal yang dikemas dalam desain modern dan interaktif.
+    </p>
+  </section>
+
+  <section class="biodata-section scroll-fade show" id="biodata">
+  <div class="card-3d">
+    <div class="card-face card-front">
+      <div class="card-header">
+        <h3>YUSTINO YOEL</h3>
+        <p>REKAYASA KOMPUTER</p>
+      </div>
+
+      <!-- Lanyard di sini -->
+      <div class="lanyard-holder"></div>
+
+      <!-- Foto berada tepat di bawah tali lanyard -->
+      <img src="./WELCOME TO WEBSITE YUSTINO YOEL_files/yoel.jpg" class="card-photo" alt="Foto Yustino Yoel">
+
+      <div class="card-body">
+        <p><strong>NIM:</strong> 2356202033</p>
+      </div>
+    </div>
+
+    <div class="card-face card-back">
+    <p>KARTU IDENTITAS</p>
+    <img src="./WELCOME TO WEBSITE YUSTINO YOEL_files/qrcode.png" alt="QR Code" class="qr-code">
+    </div></div></section> <!-- Penutup untuk biodata-section -->
+  
+
+
+
+  <section class="article scroll-fade show" id="artikel">
+    <h3>Artikel: Mengenal Lebih Dekat Suku Dayak Mualang</h3>
+    <img src="./WELCOME TO WEBSITE YUSTINO YOEL_files/pakaian-adat-dayak.jpeg" alt="Alat musik tradisional Dayak Mualang">
+    <p>Dayak Mualang merupakan salah satu sub-suku Dayak yang berasal dari Kalimantan Barat, Indonesia. Mereka termasuk dalam rumpun Dayak Ibanic yang memiliki keterkaitan erat dengan suku Iban. Sebagian besar masyarakat Dayak Mualang menetap di Kabupaten Sekadau dan wilayah sekitarnya.</p>
+
+    <p>Masyarakat Dayak Mualang menggunakan bahasa Mualang, yang masih satu rumpun dengan bahasa Iban. Bahasa ini menjadi alat komunikasi utama dalam kehidupan sehari-hari. Mereka juga mahir berbahasa Indonesia untuk berinteraksi dengan masyarakat luar.</p>
+
+    <img src="./WELCOME TO WEBSITE YUSTINO YOEL_files/rumah-betang.jpeg" alt="Rumah Panjang Dayak Mualang">
+    <p>Rumah adat mereka disebut rumah panjang atau Betang. Rumah ini menjadi simbol kebersamaan dan pusat kegiatan adat. Selain itu, masyarakat Dayak Mualang juga mahir dalam seni ukir, tenun, dan memainkan musik tradisional seperti sape’.</p>
+
+    <img src="./WELCOME TO WEBSITE YUSTINO YOEL_files/alat-musik-tradisional.jpeg" alt="Kegiatan budaya Dayak Mualang">
+    <p>Tarian khas mereka antara lain:</p>
+    <ul>
+      <li><strong>Ngajat Kayau:</strong> Tarian perang khas Dayak.</li>
+      <li><strong>Tari Pingan:</strong> Tarian piring khas wilayah Belitang.</li>
+      <li><strong>Tari Pedang Mualang:</strong> Tarian pria dari daerah Merbang dan Sebetung.</li>
+      <li><strong>Ajat Temuai Datai:</strong> Tarian penyambutan tamu.</li>
+    </ul>
+
+    <img src="./WELCOME TO WEBSITE YUSTINO YOEL_files/alat-musik-dayak.jpeg" alt="Pakaian adat Dayak Mualang">
+    <p>Kepercayaan asli mereka adalah Kaharingan, namun kini sebagian besar juga memeluk agama Kristen dan Islam. Meski begitu, tradisi tetap dijaga seperti:</p>
+    <ul>
+      <li><strong>Gawai:</strong> Pesta panen penuh syukur dan kebersamaan.</li>
+      <li><strong>Nyobeng:</strong> Ritual penyucian tengkorak.</li>
+      <li><strong>Ritual Penyembuhan:</strong> Minta kesembuhan dari roh jahat.</li>
+      <li><strong>Berangap:</strong> Minum tuak sebagai syarat peminangan.</li>
+    </ul>
+
+    <p>Dayak Mualang adalah penjaga warisan budaya Kalimantan Barat. Meski zaman berubah, identitas mereka tetap hidup dalam semangat dan adat yang lestari.</p>
+  </section>
+
+ <div class="social-media-icons-bottom scroll-fade show" id="medsos">
+  <a href="https://www.instagram.com/ystno_yoel/profilecard/?igsh=MTBuejRpeDc3YXoxeA==" target="_blank">
+    <img src="./WELCOME TO WEBSITE YUSTINO YOEL_files/instagram.png" alt="Instagram">
+  </a>
+  <a href="https://www.facebook.com/share/16UeXhtLSP/" target="_blank">
+    <img src="./WELCOME TO WEBSITE YUSTINO YOEL_files/facebook.png" alt="Facebook">
+  </a>
+</div>
+
+<footer>
+  © 2025 Yustino Yoel. All rights reserved.
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.about, .biodata-section, .article, .social-media-icons-bottom').forEach(el => {
+    el.classList.add('scroll-fade');
+    observer.observe(el);
+  });
+</script>
+
+
+</body></html>

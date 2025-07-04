@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang Yustino Yoel</title>
+  <link rel="stylesheet" href="profil.css" />
+</head>
+<body>
+  <div class="btn-fixed-top">
+    <a href="index.html" class="btn">Kembali ke Beranda</a>
+  </div>
+
+  <header class="header">
+    <h1>Tentang Yustino Yoel</h1>
+    <p>About Yustino Yoel</p>
+  </header>
+
+  <section class="about-container">
+    <div class="about-img">
+      <img src="yoel.jpg" alt="Yustino Yoel" class="animasi-foto">
+    </div>
+    <div class="about-text">
+      <h2>I'm Yustino Yoel</h2>
+      <p>
+        Saya Yustino Yoel, mahasiswa Rekayasa Komputer di Institut Teknologi Keling Kumang. Asal saya dari Dusun Pateh, Belitang Hulu, Kabupaten Sekadau. Website ini adalah ekspresi kecintaan saya terhadap budaya Dayak Mualang, teknologi, dan edukasi. 
+      </p>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <h2>Profil Singkat</h2>
+    <ul class="info-list">
+      <li><strong>Nama:</strong> Yustino Yoel</li>
+      <li><strong>Tanggal Lahir:</strong> 29 Juli 2005</li>
+      <li><strong>Alamat:</strong> Sekadau & Pateh</li>
+      <li><strong>Hobby:</strong> Sepak Bola</li>
+      <li><strong>Cita-cita:</strong> Konglomerat</li>
+      <li><strong>Status:</strong> Mahasiswa</li>
+      <li><strong>SD:</strong> SDN 1 Kumpang Ilong</li>
+      <li><strong>SMP:</strong> SMPN 5 Belitang Hulu</li>
+      <li><strong>SMA:</strong> SMAN 1 Belitang Hulu</li>
+      <li><strong>Instagram:</strong> <a href="https://instagram.com/ystno_yoel" target="_blank">@ystno_yoel</a></li>
+    </ul>
+  </section>
+
+  <section class="gallery-section">
+  <h2>Galeri Foto</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="foto1.jpg" alt="Foto 1"></div>
+    <div class="gallery-item"><img src="foto2.jpg" alt="Foto 2"></div>
+    <div class="gallery-item"><img src="foto3.jpg" alt="Foto 3"></div>
+    <div class="gallery-item"><img src="foto4.jpg" alt="Foto 4"></div>
+    <div class="gallery-item"><img src="foto5.jpg" alt="Foto 5"></div>
+    <div class="gallery-item"><img src="foto6.jpg" alt="Foto 6"></div>
+  </div>
+  <!-- Lightbox Popup -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">&times;</span>
+  <span class="lightbox-nav left" onclick="event.stopPropagation(); prevImage()">&#10094;</span>
+  <img id="lightbox-img" src="" alt="Preview Besar">
+  <span class="lightbox-nav right" onclick="event.stopPropagation(); nextImage()">&#10095;</span>
+</div>
+
+</section>
+
+
+  <footer class="footer">
+    <p>&copy; 2025 Yustino Yoel | Website Pribadi</p>
+  </footer>
+
+  <script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  function showLightbox(src) {
+    lightboxImg.src = src;
+    lightbox.style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+  }
+
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => showLightbox(img.src));
+  });
+</script>
+<script>
+  const galleryImages = Array.from(document.querySelectorAll('.gallery-item img'));
+  let currentImageIndex = 0;
+
+  function showLightbox(src) {
+    currentImageIndex = galleryImages.findIndex(img => img.src === src);
+    lightboxImg.src = src;
+    lightbox.style.display = 'flex';
+  }
+
+  function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+    lightboxImg.src = galleryImages[currentImageIndex].src;
+  }
+
+  function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+    lightboxImg.src = galleryImages[currentImageIndex].src;
+  }
+
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => showLightbox(img.src));
+  });
+</script>
+<script>
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const lightboxElement = document.getElementById('lightbox');
+
+  lightboxElement.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  lightboxElement.addEventListener('touchend', function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+  });
+
+  function handleGesture() {
+    const swipeThreshold = 50; // minimal jarak swipe
+    if (touchEndX < touchStartX - swipeThreshold) {
+      nextImage(); // swipe kiri
+    }
+    if (touchEndX > touchStartX + swipeThreshold) {
+      prevImage(); // swipe kanan
+    }
+  }
+</script>
+
+</body>
+</html>
